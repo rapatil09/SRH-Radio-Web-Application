@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+
+ <!-- SAD Group: this is important as viewport will allow the broswer even if on mobile to adapt to the width as we need a app
+ that opens from both a mobile device as well as desktop-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <title>SRH Radio</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+
+  <!--SAD Group: Link to our style sheet for all the design specs-->
+  <link rel="stylesheet" href="/stylesheets/Layout.css">
+  
+
+
+</head>
+
+<body>
+
+	<div class="row">
+		<div class="twelve columns">
+		
+		<p align="center"><h2>SRH Radio</h2></p>
+		</div>
+	</div>
+
+
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="nav-bar">
+ 		 		<li><a href="#/">Home</a></li>
+  				<li class="active"><a href="#/podcasts">Podcasts</a></li>
+  				<li><a href="#">Podcast Calendar</a></li>
+				<li><a href="#">News and Events</a></li>
+  				<li><a href="#">Contact Us</a></li>
+			</ul>
+			
+		</div>
+	</div>
+
+
+
+<div class="row">
+		<div class="twelve columns">
+			<div class="row">
+				<div class="eight columns">
+					<!--<h3>Podcast Repository</h3>-->
+					
+					<header> <h4>Podcast Repository</h4></header>
+					<hr>
+						
+    						<ul ng-repeat="items in items" >
+  									
+  									<li >
+  										<a href="#/podcasts/{{items.id}}"> {{items.title}}</a>
+  										
+  									</li>
+  							
+							</ul>
+  						
+					<hr />					
+				</div>
+	
+<div class="four columns">
+					<h4>Search Podcasts</h4>
+					<a href="#/podcasts/lists/categories">Search by Category</a><br><br>
+					<a  href="" ng-click = "showText()">Search by Keyword</a> </br></br>
+
+
+					<input type="text" name="s" id="searchtext" size="15" value="Search"  ng-hide="testHide" ng-model="userSearchInput"
+					
+							onfocus="if (this.value==this.defaultValue)
+								this.value='';" onblur="if(this.value==''){this.value='Search'}"> </br></br>
+					<a href="#/podcasts/lists/keywords"  ng-click = "takeSearchKeyword()" ng-hide="searchButtonHide">Search</a><br> <br>
+
+
+	</div>
+
+</body>
